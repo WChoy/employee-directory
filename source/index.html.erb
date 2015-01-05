@@ -1,10 +1,18 @@
----
-title: Welcome to Middleman
----
-
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<main>
+  <h1><%= data.site.introduction %></h1>
+  <h2><%= data.site.another %></h2>
+  <ul class="employeeList">
+    <% data.employees.each do |employee| %>
+      <li class="employee">
+        <div class="icon" style="background-color:<%= "#%06x" % (rand * 0xffffff)%>"><%= employee.name.split()[0][0] %></div>
+        <div class="about">
+          <h3><%= employee.name %> a.k.a <%= employee.alias %></h3>
+          <div class="details">
+            <p><strong>Hometown:</strong> <%= employee.hometown %></p>
+            <p><strong>Position:</strong> <%= employee.position %></p>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</main
