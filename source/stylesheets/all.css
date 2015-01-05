@@ -29,6 +29,8 @@ ul > li {
   padding: 2rem;
   border-bottom: 1px solid #C3C3C3;
   position: relative;
+  -webkit-transform: scale(0);
+  opacity: 0;
 }
 
 ul > li:last-child {
@@ -90,7 +92,8 @@ ul > li:after {
 
 .pop-in {
   -webkit-animation-name: pop-in;
-  -webkit-animation-duration: .9s;
+  -webkit-animation-duration: 1.1s;
+  -webkit-animation-fill-mode: both;
 }
 
 @-webkit-keyframes pop-in {
@@ -109,5 +112,6 @@ ul > li:after {
   }
   to {
     -webkit-transform: scale(1);
+    opacity: 1;
   }
 }
