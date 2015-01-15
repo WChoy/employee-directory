@@ -68,7 +68,7 @@ ul > li:after {
 
 .employee .details {
   padding-left: 2rem;
-  border-left: 7px solid #C3C3C3;
+  border-left: 10px solid rgba(0,0,0,0.05);
 }
 
 .employee h3 {
